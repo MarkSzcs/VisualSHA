@@ -37,6 +37,11 @@ namespace binaryHandling
             return new StringBuilder().AppendJoin("", BinaryValue).ToString();
         }
 
+        public long GetLength()
+        {
+            return BinaryValue.Count * 8;
+        }
+
         public string ToHex()
         {
             return new BigInteger(BinaryValue.ToArray()).ToString("X");
